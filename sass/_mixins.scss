@@ -1,0 +1,48 @@
+@mixin tfButton($tfButton: #fff) {
+    border-radius: 3px;
+    background-color: $tfButton;
+    border: 2px solid #00bcd4;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin theme($theme: #dfe5e8) {
+    background: $theme;
+    @include size(3rem);
+    border: $boder;
+    text-align: center;
+    outline: none;
+    margin-right: -4px;
+}
+
+@mixin secInput {
+    height: 4rem;
+    color: $primary-color;
+    border: $boder;
+    padding: 0 1.2rem;
+    margin-bottom: 1.2rem;
+    outline: none;
+}
+
+@mixin iconPro($iconPro: $blue-color) {
+    position: absolute;
+    border-radius: 50%;
+    background-color: $iconPro;
+}
+
+@mixin iconSpan($textColor: #fff) {
+    position: absolute;
+    font-size: 1.2rem;                               
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    line-height: 5.4rem;
+    color: $textColor;
+    left: 50%;
+    transform: translateX(-50%);
+}

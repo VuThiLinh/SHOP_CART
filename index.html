@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project name</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <p class="head-text">You Have <span class="strong">6 Items</span> In Your Cart</p>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">PRODUCT</th>
+                    <th>PRICE</th>
+                    <th>QUANTITY</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fas fa-times-circle close"></i></td>
+                    <td>
+                        <img class="img-sp">
+                    </td>
+                    <td>
+                        <p class="desc"><span class="strong">Lorem Ipsum dolor sit amet</span> Size: large; Color: Black</p>
+                    </td>
+                    <td>
+                        <span class="price">$35.99</span>
+                    </td>
+                    <td class="quantity">
+                        <input type="button" value="-" class="qty-btn">
+                        <input type="text" value="1" class="input-value">
+                        <input type="button" value="+" class="qty-btn">
+        <!-- 			
+                        <input onclick="var result = document.getElementById('quantity'); var qty = result.value; if( !isNaN(qty) &amp; qty > 1 ) result.value--;return false;" type='button' value='-' />
+                        <input id='quantity' min='1' name='quantity' type='text' value='1' />
+                        <input onclick="var result = document.getElementById('quantity'); var qty = result.value; if( !isNaN(qty)) result.value++;return false;" type='button' value='+' /> -->
+                    </td>
+                    <td class="total">$35.99</td>
+                </tr>
+        
+                <tr>
+                    <td><i class="fas fa-times-circle close"></i></td>
+                    <td>
+                        <img class="img-sp">
+                    </td>
+                    <td>
+                        <p class="desc"><span class="strong">Consectetur adipisicing</span></p>
+                    </td>
+                    <td>
+                        <span class="price">$1285.99</span>
+                    </td>
+                    <td class="quantity">
+                        <input type="button" value="-" class="qty-btn">
+                        <input type="text" value="1" class="input-value">
+                        <input type="button" value="+" class="qty-btn">
+                    </td>
+                    <td class="total">$1285.99</td>
+                </tr>
+        
+                <tr>
+                    <td><i class="fas fa-times-circle close"></i></td>
+                    <td>
+                        <img class="img-sp">
+                    </td>
+                    <td>
+                        <p class="desc"><span class="strong">Elit sed do eiusmod </span> Size: Large</p>
+                    </td>
+                    <td>
+                        <span class="price">$89.99</span>
+                    </td>
+                    <td class="quantity">
+                        <input type="button" value="-" class="qty-btn">
+                        <input type="text" value="1" class="input-value">
+                        <input type="button" value="+" class="qty-btn">
+                    </td>
+                    <td class="total">$89.99</td>
+                </tr>
+        
+                <tr>
+                    <td><i class="fas fa-times-circle close"></i></td>
+                    <td>
+                        <img class="img-sp">
+                    </td>
+                    <td>
+                        <p class="desc"><span class="strong">Tempor incldldunt ut labore</span></p>
+                    </td>
+                    <td>
+                        <span class="price">$12.00</span>
+                    </td>
+                    <td class="quantity">
+                        <input type="button" value="-" class="qty-btn">
+                        <input type="text" value="1" class="input-value">
+                        <input type="button" value="+" class="qty-btn">
+                    </td>
+                    <td class="total">$12.00</td>
+                </tr>
+    
+                <tr>
+                    <td><i class="fas fa-times-circle close"></i></td>
+                    <td>
+                        <img class="img-sp">
+                    </td>
+                    <td>
+                        <p class="desc"><span class="strong">Et dolore magna aliqua</span></p>
+                    </td>
+                    <td>
+                        <span class="price">$158.25</span>
+                    </td>
+                    <td class="quantity">
+                        <input type="button" value="-" class="qty-btn">
+                        <input type="text" value="1" class="input-value">
+                        <input type="button" value="+" class="qty-btn">
+                    </td>
+                    <td class="total">$158.25</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="tf-left">
+                        <input class="tf-input" type="text" placeholder="Enter Coupon Code Here...">
+                        <button class="btn-apply">APPLY</button>                       
+                    </td>
+                    <td colspan="3" class="tf-right">
+                        <button class="btn-update">UPDATE CART</button>
+                        <button class="btn-checkout">
+                            <i class="far fa-check-circle icon-check"></i>
+                            <span>CHECKOUT</span>
+                        </button>
+                    </td>
+                </tr>
+            </tfoot>            
+        </table>
+
+        <section>
+            <div>
+                <div class="row">
+                    <div class="sec-left col-lg-6 col-sm-6 col-12">
+                        <h1>CALCULATE SHIPPING</h1>
+                        <select class="country col-12" name="country" id="">
+                            <option value="">Select Your Country</option>
+                            <option value="">Việt Nam</option>
+                            <option value="">Nhật Bản</option>
+                        </select>
+                        <div class="sec-left-input">
+                            <input type="text" placeholder="State /Country">
+                            <input type="text" placeholder="Postcoce /Zip">
+                        </div>
+                        <button class="ahihi">UPDATE TOTALS</button>
+                    </div>
+        
+                    <div class="sec-right col-lg-6 col-sm-6 col-12">
+                        <h1>CART TOTALS</h1>
+                        <table class="sec-table">
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>$1285.99</td>
+                            </tr>       
+                            <tr>
+                                <td>Shipping And Handling</td>
+                                <td>
+                                    <ul style="list-style: circle;">
+                                        <li>Flat Rate: $3.99</li>
+                                        <li>Free shipping</li>
+                                        <li>Flat Rate: $12.99</li>
+                                    </ul>                                 
+                                </td>
+                            </tr>               
+                            <tr>
+                                <td>Total</td>
+                                <td>$2015.00</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid">
+            <h2>YOU MAY BE INTERESTED IN</h2>
+            <div class="list-products">
+                <div class="row">
+                    <div class="product-item col-lg-2 col-sm-4 col-12">
+                        <div class="image">
+                            <img class="product-item__img">
+                        </div>
+                        <div class="desc-product">
+                            <p class="name-pro">Denim Classy Shorts</p>
+                            <span class="price-pro">$35.00 - $89.99</span>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-2 col-sm-4 col-12">
+                        <div class="image">
+                            <img class="product-item__img">
+                            <div class="sale-pro">
+                                <span>SALE</span>
+                            </div>
+                            <div class="new-pro">
+                                <span>NEW</span>
+                            </div>
+                        </div>
+                        <div class="desc-product">
+                            <p class="name-pro">Denim Classy Shorts</p>
+                            <span class="price-pro">$35.00 - $89.99</span>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-2 col-sm-4 col-12">
+                        <div class="image">
+                            <img class="product-item__img">
+                        </div>
+                        <div class="desc-product">
+                            <p class="name-pro">Denim Classy Shorts</p>
+                            <span class="price-pro">$35.00 - $89.99</span>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-2 col-sm-4 col-12">
+                        <div class="image">
+                            <img class="product-item__img">
+                        </div>
+                        <div class="desc-product">
+                            <p class="name-pro">Denim Classy Shorts</p>
+                            <span class="price-pro">$35.00 - $89.99</span>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-2 col-sm-4 col-12">
+                        <div class="image">
+                            <img class="product-item__img">
+                        </div>
+                        <div class="desc-product">
+                            <p class="name-pro">Denim Classy Shorts</p>
+                            <span class="price-pro">$35.00 - $89.99</span>
+                        </div>
+                    </div>
+                    <div class="product-item col-lg-2 col-sm-4 col-12">
+                        <div class="image">
+                            <img class="product-item__img">
+                        </div>
+                        <div class="desc-product">
+                            <p class="name-pro">Denim Classy Shorts</p>
+                            <span class="price-pro">$35.00 - $89.99</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+</body>
+</html>

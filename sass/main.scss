@@ -1,0 +1,302 @@
+@import "./variables";
+@import "./mixins";
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body {
+font: 100% $font-stack;
+color: $primary-color;
+}
+.container {
+    margin-top: 5rem;
+    padding: 0 2rem;
+
+    .head-text {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .strong {
+        color: $blue-color;
+    }
+  
+    table {
+        width: 100%;
+        border: $boder;
+
+        tr {
+            padding: 1.2rem 0;
+            height: 9.4rem;  
+
+            &:nth-child(even) {
+                background-color: #f0f3f2;
+            }
+
+            &:first-child {
+                height: 6rem;
+            }
+        }
+      
+        td {
+            text-align: center;
+            font-size: 1.4rem;  
+            padding: 0 1.2rem;            
+        }
+
+        th {
+            font-size: 1.4rem;
+            letter-spacing: 0.1rem;
+            background-color: #b6c6c9;
+            color: #fff;
+            text-align: center;
+        }
+
+        .close {
+            font-size: 1.8rem;
+            color: red;
+            opacity: 0.9;
+            margin-left: 1.2rem;
+        }
+
+        .img-sp {
+            @include size(5rem);           
+            background-color: #99a9b5;
+        }
+
+        .desc {
+            margin: 0;
+            text-align: start;
+        }
+
+        .quantity {
+            display: flex;
+            padding: 3.2rem 0;
+            align-items: center;
+            
+            .qty-btn {
+                @include theme;                         
+            }
+    
+            .input-value {
+                @include theme(rgba(245, 247, 246, 255));                
+            }
+        }
+
+
+        tfoot {
+            height: 9.4rem;
+            border-top: $boder;
+            border-bottom: $boder;
+            padding: 0 2rem;
+
+            .tf-left {
+                text-align: left;
+            }
+
+            .tf-right {
+                text-align: right;
+            }
+
+            .tf-input {
+                @include size(26rem, 5rem);                
+                border-radius: 0.3rem;
+                background-color: #f5f7f6;
+                border: $boder;
+                padding: 0 1.2rem;
+                margin-right: 1.2rem;
+            }  
+
+            .btn-apply {
+                @include tfButton(rgba(0,188,212,0));
+                @include size(11rem, 5rem);
+                border: 0.3rem solid $blue-color;
+                color: rgba(17, 192, 214, 255);
+            }
+
+            .btn-update {
+                @include tfButton(#00bcd4);
+                @include size(18rem, 5rem);
+            }
+
+            .btn-checkout {
+                @include tfButton(#393d50);
+                @include size(20rem, 5rem);
+                margin-left: 1.2rem;
+
+                .icon-check {
+                    font-size: 1.8rem;
+                    margin-right: 0.6rem;
+                }
+            }
+        }        
+    }
+
+    section {
+        margin: 8rem 0;
+
+        h1 {
+            color: #3c3950;
+            letter-spacing: 0.2rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+        }
+
+        .sec-left {
+            font-size: 1.4rem;
+
+            select {
+                @include secInput();
+            }
+
+            &-input {
+                display: flex;
+                justify-content: space-between;
+
+                input {
+                    @include secInput();
+                    width: calc((100% - 1.2rem) / 2);
+                    text-align: left;
+                }                  
+            }
+
+            button {
+                @include tfButton;
+                @include size(21rem, 5rem);
+                color: $blue-color;              
+                margin-left: 0;
+            }
+        }
+
+        .sec-right {
+            .sec-table, tr, td {
+                border: $boder;
+                text-align: left;
+            }
+            tr {                    
+                height: 5.4rem;
+                max-height: 9.4rem;
+
+                &:nth-child(even) {
+                    background-color: #fff;
+                }
+            }
+           
+            td:nth-child(1) {
+                background-color: #f0f3f2;
+            }
+
+            ul {
+                padding: 0.6rem 0;
+                margin-left: 1.2rem;
+               
+                li {
+                    padding: 0.4rem 0;
+                }
+            }
+        }
+    }
+
+    .grid {
+        margin-top: 5rem;
+
+        h2 {
+            letter-spacing: 2px;
+            color: #3c3950;
+        }
+
+        .list-products {
+            margin: 30px 0;
+
+            .product-item {
+                .image {
+                    position: relative;
+
+                    .sale-pro {
+                        @include iconPro();
+                        @include size(60px);
+                        z-index: 1;
+                        top: 20px;
+                        right: -16px;                       
+
+                        span {
+                            @include iconSpan;
+                            font-size: 1.4rem;                           
+                        }
+                    }
+
+                    .new-pro {
+                        @include iconPro(#393d50);
+                        @include size(50px);
+                        top: 66px;
+                        right: -14px;       
+
+                        span {
+                            @include iconSpan;
+                        }
+                    }
+                }
+                
+                &__img {
+                    @include size(100%, 200px);                  
+                    background-color: #f0f3f2;
+                }
+
+                .desc-product {
+                    text-align: center;
+                    padding: 12px 6px;
+                    font-size: 1.4rem;
+
+                    .name-pro {
+                        margin-bottom: 6px;
+                    }
+
+                    .price-pro {
+                        color: $blue-color;
+                    }
+                }
+                @media screen and (max-width: 992px) {
+                    width: calc((100% - 24px) / 3);
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    section {
+        .sec-left {
+            margin-bottom: 50px;
+        }
+
+    }
+
+    .list-products {
+        .product-item {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    table {
+        tfoot { 
+            .tf-input {
+                margin-bottom: 12px;
+            }
+
+            .btn-update {
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+}
+
